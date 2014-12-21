@@ -1,10 +1,11 @@
 package FileChooserProgram.main;
 
 
+import generic.EditorProgram;
+import UI.LayerManager;
 import AWT.UI.AWTDefaultMouseUserDevice;
 import AWT.UI.AWTEditorPanel;
 import AWT.UI.AWTFileChooser;
-import AWT.UI.AWTLayerManager;
 import AWT.UI.AWTMouseUserDevice;
 import AWT.UI.AWTProgramWindow;
 import AWT.UI.AWTSimpleUserDeviceDisplayLayer;
@@ -19,22 +20,21 @@ public class AWTFileChooserProgram {
 		AWTFileChooser 		fileBrowser = new AWTFileChooser();
 		AWTMouseUserDevice 	userDevice 	= new AWTDefaultMouseUserDevice();
 		AWTEditorPanel 		editorPanel = new AWTEditorPanel(userDevice);
-		AWTLayerManager		layerManager = new AWTLayerManager();
+		LayerManager		layerManager = new LayerManager();
 		layerManager.addLayer(fileBrowser);
 		layerManager.addLayer(new AWTSimpleUserDeviceDisplayLayer(userDevice));
 		
 		editorPanel.setLayerManager(layerManager);
 		
-		AWTProgramMain main = new AWTProgramMain();
-		main.setMouse(userDevice);
-		main.setLayerManager(layerManager);
-		Thread mainThread = new Thread(main);
-		mainThread.start();
-		
 		window.add(editorPanel);
 		window.revalidate();
-
+		
+		// STARTS FILEBROWSER //
 		fileBrowser.chooseFile();
+		
+		EditorProgram editorProgram = new EditorProgram();
+		editorProgram.setMain(AWTProgramMain.create(layerManager, userDevice));
+		editorProgram.start();
 	}
 
 }
