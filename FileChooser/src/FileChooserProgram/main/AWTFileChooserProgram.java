@@ -2,7 +2,7 @@ package FileChooserProgram.main;
 
 
 import generic.EditorProgram;
-import UI.LayerManager;
+import UI.UILayerManager;
 import AWT.UI.AWTDefaultMouseUserDevice;
 import AWT.UI.AWTEditorPanel;
 import AWT.UI.AWTFileChooser;
@@ -20,7 +20,7 @@ public class AWTFileChooserProgram {
 		AWTFileChooser 		fileBrowser = new AWTFileChooser();
 		AWTMouseUserDevice 	userDevice 	= new AWTDefaultMouseUserDevice();
 		AWTEditorPanel 		editorPanel = new AWTEditorPanel(userDevice);
-		LayerManager		layerManager = new LayerManager();
+		UILayerManager		layerManager = new UILayerManager();
 		layerManager.addLayer(fileBrowser);
 		layerManager.addLayer(new AWTSimpleUserDeviceDisplayLayer(userDevice));
 		
