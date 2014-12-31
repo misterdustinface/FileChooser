@@ -3,12 +3,12 @@ package FileChooserProgram.main;
 
 import generic.EditorProgram;
 import UI.UILayerManager;
-import AWT.UI.AWTDefaultMouseUserDevice;
 import AWT.UI.AWTEditorPanel;
 import AWT.UI.AWTFileChooser;
-import AWT.UI.AWTMouseUserDevice;
 import AWT.UI.AWTProgramWindow;
-import AWT.UI.AWTSimpleUserDeviceDisplayLayer;
+import AWT.UI.Mouse.AWTDefaultMouseUserDevice;
+import AWT.UI.Mouse.AWTMouseUserDevice;
+import AWT.UI.Mouse.AWTSimpleUserDeviceDisplayLayer;
 import AWT.update.AWTProgramMain;
 
 public class AWTFileChooserProgram {
