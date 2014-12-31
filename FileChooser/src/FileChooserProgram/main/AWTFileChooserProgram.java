@@ -2,7 +2,6 @@ package FileChooserProgram.main;
 
 
 import generic.EditorProgram;
-import UI.UILayerManager;
 import AWT.UI.AWTEditorPanel;
 import AWT.UI.AWTFileChooser;
 import AWT.UI.AWTProgramWindow;
@@ -10,6 +9,7 @@ import AWT.UI.Mouse.AWTDefaultMouseUserDevice;
 import AWT.UI.Mouse.AWTMouseUserDevice;
 import AWT.UI.Mouse.AWTSimpleUserDeviceDisplayLayer;
 import AWT.update.AWTProgramMain;
+import UI.UILayerManager;
 
 public class AWTFileChooserProgram {
 	
@@ -25,7 +25,6 @@ public class AWTFileChooserProgram {
 		layerManager.addLayer(new AWTSimpleUserDeviceDisplayLayer(userDevice));
 		
 		editorPanel.setLayerManager(layerManager);
-		
 		window.add(editorPanel);
 		window.revalidate();
 		
