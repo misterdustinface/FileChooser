@@ -1,7 +1,7 @@
 package FileChooserProgram.main;
 
 
-import generic.EditorProgram;
+import generic.Application;
 import AWT.UI.AWTEditorPanel;
 import AWT.UI.AWTFileChooser;
 import AWT.UI.AWTProgramWindow;
@@ -31,7 +31,7 @@ public class AWTFileChooserProgram {
 		// STARTS FILEBROWSER //
 		fileBrowser.chooseFile();
 		
-		EditorProgram editorProgram = new EditorProgram();
+		Application editorProgram = new Application();
 		editorProgram.setMain(AWTProgramMain.create(layerManager, userDevice));
 		editorProgram.start();
 	}
