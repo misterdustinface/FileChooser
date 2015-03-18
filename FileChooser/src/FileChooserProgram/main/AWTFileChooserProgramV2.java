@@ -20,22 +20,20 @@ public class AWTFileChooserProgramV2 {
 		window.setSize(600, 400);
 
 		AWTFileChooser 		fileBrowser = new AWTFileChooser();
-		AWTMouseUserDevice 	userDevice 	= new AWTDefaultMouseUserDevice();		
-		UILayerManager		layerManager = new UILayerManager();
+		AWTMouseUserDevice 	userDevice 	= new AWTDefaultMouseUserDevice();
+		
+		UILayerManager layerManager = new UILayerManager();
 		layerManager.addLayer(fileBrowser);
 		layerManager.addLayer(new AWTSimpleUserDeviceDisplayLayer(userDevice));
 		
-		final AWTViewport view = new AWTViewport();
-		view.setSize(600, 400);	
+		final AWTViewport menuView = new AWTViewport();
+		menuView.setSize(600, 400);	
 
 		final AWTDisplay display = new AWTDisplay(userDevice);
-		display.addView(view);
-		
-		window.add(display);
-		window.revalidate();
+		display.addView(menuView);
 		
 		final AWTUIDrawer uiDrawer = new AWTUIDrawer();
-		uiDrawer.setDrawing(view);
+		uiDrawer.setDrawing(menuView);
 		uiDrawer.setLayerManager(layerManager);
 		
 		/**
@@ -49,6 +47,8 @@ public class AWTFileChooserProgramV2 {
 		FixedDrawer fixedDrawer = new FixedDrawer(uiDrawer);
 		fixedDrawer.setDrawsPerSecond(60);
 
+		window.add(display);
+		window.revalidate();
 		
 		// STARTS FILEBROWSER //
 		fileBrowser.chooseFile();
