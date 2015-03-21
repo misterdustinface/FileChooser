@@ -2,13 +2,13 @@ package FileChooserProgram.main;
 
 
 import generic.Application;
+import generic.EditorProgramMain;
 import AWT.UI.AWTEditorPanel;
 import AWT.UI.AWTFileChooser;
 import AWT.UI.AWTProgramWindow;
 import AWT.UI.Mouse.AWTDefaultMouseUserDevice;
 import AWT.UI.Mouse.AWTMouseUserDevice;
 import AWT.UI.Mouse.AWTSimpleUserDeviceDisplayLayer;
-import AWT.update.AWTProgramMain;
 import UI.UILayerManager;
 
 public class AWTFileChooserProgram {
@@ -32,7 +32,7 @@ public class AWTFileChooserProgram {
 		fileBrowser.chooseFile();
 		
 		Application editorProgram = new Application();
-		editorProgram.setMain(AWTProgramMain.create(layerManager, userDevice));
+		editorProgram.setMain(EditorProgramMain.create(layerManager, userDevice));
 		editorProgram.start();
 	}
 
