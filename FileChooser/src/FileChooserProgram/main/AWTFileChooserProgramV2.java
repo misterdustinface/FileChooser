@@ -56,10 +56,10 @@ public class AWTFileChooserProgramV2 {
 		Application editorProgram = new Application();
 		editorProgram.setMain(EditorProgramMain.create(layerManager, userDevice));
 		
-		//editorProgram.setDrawer(eventDrawer);
-		editorProgram.setDrawer(fixedDrawer);
+		//editorProgram.addComponent("Drawer", eventDrawer);
+		editorProgram.addComponent("Drawer", fixedDrawer);
 		
-		//editorProgram.setRenderer(null); // SWING AWT IS RENDERER
+		//editorProgram.addComponent("Renderer", null); // SWING AWT IS RENDERER
 		editorProgram.start();
 	}
 
