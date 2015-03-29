@@ -5,7 +5,7 @@ import generic.EditorProgramMain;
 import AWT.UI.AWTFileChooser;
 import AWT.UI.AWTProgramWindow;
 import AWT.UI.Mouse.AWTMouseUserDevice;
-import AWT.UI.Mouse.AWTSimpleUserDeviceDisplayLayer;
+import AWT.UI.Mouse.AWTMouseUserDeviceDisplayLayer;
 import AWT.UI2.AWTDisplay;
 import AWT.UI2.AWTUIDrawer;
 import AWT.UI2.AWTViewport;
@@ -23,7 +23,7 @@ public class AWTFileChooserProgramV2 {
 		
 		UILayerManager layerManager = new UILayerManager();
 		layerManager.addLayer(fileBrowser);
-		layerManager.addLayer(new AWTSimpleUserDeviceDisplayLayer(userDevice));
+		layerManager.addLayer(new AWTMouseUserDeviceDisplayLayer(userDevice));
 		
 		final AWTViewport menuView = new AWTViewport();
 		menuView.setSize(600, 400);	

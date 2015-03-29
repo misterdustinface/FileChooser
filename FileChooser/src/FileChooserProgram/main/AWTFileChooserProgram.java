@@ -7,7 +7,7 @@ import AWT.UI.AWTEditorPanel;
 import AWT.UI.AWTFileChooser;
 import AWT.UI.AWTProgramWindow;
 import AWT.UI.Mouse.AWTMouseUserDevice;
-import AWT.UI.Mouse.AWTSimpleUserDeviceDisplayLayer;
+import AWT.UI.Mouse.AWTMouseUserDeviceDisplayLayer;
 import UI.UILayerManager;
 
 public class AWTFileChooserProgram {
@@ -21,7 +21,7 @@ public class AWTFileChooserProgram {
 		AWTEditorPanel 		editorPanel = new AWTEditorPanel(userDevice);
 		UILayerManager		layerManager = new UILayerManager();
 		layerManager.addLayer(fileBrowser);
-		layerManager.addLayer(new AWTSimpleUserDeviceDisplayLayer(userDevice));
+		layerManager.addLayer(new AWTMouseUserDeviceDisplayLayer(userDevice));
 		
 		editorPanel.setLayerManager(layerManager);
 		window.add(editorPanel);
