@@ -1,14 +1,14 @@
 package FileChooserProgram.main;
 
 
-import generic.Application;
-import generic.EditorProgramMain;
+import main.EditorProgramMain;
 import AWT.UI.AWTEditorPanel;
 import AWT.UI.AWTFileChooser;
 import AWT.UI.AWTProgramWindow;
 import AWT.UI.Mouse.AWTMouseUserDevice;
 import AWT.UI.Mouse.AWTMouseUserDeviceDisplayLayer;
 import UI.UILayerManager;
+import base.Application;
 
 public class AWTFileChooserProgram {
 	

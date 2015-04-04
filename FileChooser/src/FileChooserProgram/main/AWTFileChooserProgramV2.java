@@ -1,7 +1,6 @@
 package FileChooserProgram.main;
 
-import generic.Application;
-import generic.EditorProgramMain;
+import main.EditorProgramMain;
 import AWT.UI.AWTFileChooser;
 import AWT.UI.AWTProgramWindow;
 import AWT.UI.Mouse.AWTMouseUserDevice;
@@ -11,6 +10,7 @@ import AWT.UI2.AWTUIDrawer;
 import AWT.UI2.AWTViewport;
 import AWT.UI2.FixedDrawer;
 import UI.UILayerManager;
+import base.Application;
 
 public class AWTFileChooserProgramV2 {
 	
